@@ -1,0 +1,41 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-button [matMenuTriggerFor]="animals">
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+    </button>
+    <mat-menu #animals="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="periodo">
+        Periodo
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="ano">
+        Ano
+      </button>
+    </mat-menu>
+
+    <mat-menu #periodo="matMenu">
+      <button mat-menu-item>1º Semestre</button>
+      <button mat-menu-item>2º Semestre</button>
+      <button mat-menu-item>3º Semestre</button>
+      <button mat-menu-item>4º Semestre</button>
+      <button mat-menu-item>5º Semestre</button>
+      <button mat-menu-item>6º Semestre</button>
+    </mat-menu>
+
+    <mat-menu #ano="matMenu">
+      <button mat-menu-item>2020</button>
+      <button mat-menu-item>2021</button>
+      <button mat-menu-item>2022</button>
+    </mat-menu>
+
+
+    <span>Projeto Angula</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar-row>
+
+</mat-toolbar>
